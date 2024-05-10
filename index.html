@@ -4,78 +4,80 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#157878">
-        <meta name="description" content="Jarvis Local Help">
-        <meta name="keywords" content="A local network helper">
+        <meta name="description" content="Jarvis Local Transfer">
+        <meta name="keywords" content="A local network transfer">
         <meta name="revisit-after" content="3 days">
         <meta name="robots" content="index, follow, noarchive">
 
-        <title>Home</title>
+        <title>Local Transfer</title>
 
         <link rel="stylesheet" type="text/css" href="assets/css/modern-normalize-min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/fonts-min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
         <script src="assets/js/particles.min.js"></script>
+        <script defer src="https://vercount.one/js"></script>
     </head>
 
     <body>
         <section class="page-header">
             <canvas class="background"></canvas>
             <h1 class="project-name">
-                <a style="text-decoration:none; color:inherit">Local&nbsp;&nbsp;&nbsp;&nbsp;Help</a>
+                <a style="text-decoration:none; color:inherit">Local&nbsp;&nbsp;&nbsp;&nbsp;Transfer</a>
             </h1>
             <h2 class="project-tagline">
                 A derivative tool of the Jarvis Engineering by <a href="https://Illusionna.readthedocs.io" target="_blank" style="text-decoration:none; color:inherit">@Illusionna</a>
             </h2>
-            <a href="https://github.com/Illusionna/NEUmail" target="_blank" class="btn">View source on GitHub</a>
-            <a href="https://illusionna.readthedocs.io/zh/latest/_images/Illusionna.png" target="_blank" class="btn">Download latest release</a>
+            <a href="https://github.com/Illusionna/LocalTransfer" target="_blank" class="btn">View source on GitHub</a>
+            <a href="https://github.com/Illusionna/LocalTransfer/releases/tag/V1" target="_blank" class="btn">Download latest release</a>
         </section>
 
         <section class="main-content">
             <div id="home">
                 <br>
-                <h1>Overview</h1>
-                <p>UPX strengths in a nutshell:</p>
-                <ul>
-                    <li><strong>safe</strong>: you can list, test and <u>unpack</u> your executables. Also, a checksum of both the compressed and uncompressed file is maintained internally.</li>
-                    <li><strong>free</strong>: UPX is distributed with full source code under the terms of the <a href="https://upx.github.io/upx-COPYING.txt">GNU General Public License v2+</a>; either under the pure GPLv2+, or (at your option) under the GPLv+2 with special exceptions and restrictions granting the free usage for all binaries including commercial programs as stated in the <a href="https://upx.github.io/upx-license.html">UPX License Agreement</a></li>
-                </ul>
-                <p>You probably understand now why we call UPX the "Ultimate Packer for eXecutables"</p>
-                <p><i>The term <b>UPX</b> is a shorthand for the Ultimate Packer for eXecutables. All trademarks, brands, and names are the property of their respective owners.</i></p>
-            </div>
+                <h1>概述</h1>
+                <p>这是一个局域网内文件传输悍匪，致力于跨平台多设备之间文件共享。它需要一台电脑当作服务器，其余电子设备如计算机、手机、平板、手表等，通过局域网 WIFI 或热点接入服务器后，即可跨平台互传文件。</p>
+                <p>它的优点在于零门槛，适合广泛的人群，并且文件传输速度取决于网络带宽，而一般局域网内部，传文件速度是相当快的。但 Local Transfer 是自制工具，因此可能会被误杀，确保防火墙允许“悍匪”进入你的网络 (●ˇ∀ˇ●)</p>
+                <h1>使用</h1>
+                <p>确保所有电子设备在同一个局域网下，你和朋友需要连接同一个 WIFI 或设备热点。</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>姓名</th>
-                        <th>年龄</th>
-                        <th>性别</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>张三</td>
-                        <td>20</td>
-                        <td>男</td>
-                    </tr>
-                    <tr>
-                        <td>李四</td>
-                        <td>25</td>
-                        <td>女</td>
-                    </tr>
-                    <tr>
-                        <td>王五</td>
-                        <td>30</td>
-                        <td>男</td>
-                    </tr>
-                </tbody>
-            </table>
+                <h3>exe 程序</h3>
+                <pre><code>先下载程序压缩包，也可以去 GitHub 发行版主页下载。</code></pre>
+                <pre><code>https://github.com/Illusionna/LocalTransfer/releases/tag/V1</code></pre>
+                <pre><code>确保是 Windows 10 + 并且防火墙和杀毒软件不要误杀程序</code></pre>
+                <pre><code><u><strong>直接双击程序或快捷方式运行</strong></u>，零门槛</code></pre>
+                <pre><code>或者选择终端配置相关参数后再执行，查看帮助文档指令</code></pre>
+                <pre><code>>>> server.exe -h</code></pre>
+
+                <h3>源码</h3>
+                <pre><code>先下载代码压缩包，也可以去 GitHub 代码主页下载。</code></pre>
+                <pre><code>>>> curl https://github.com/Illusionna/LocalTransfer/archive/refs/heads/main.zip -o main.zip</code></pre>
+                <pre><code>建议 Windows 10 + 以及 Python 3.8.0 +</code></pre>
+                <pre><code>>>> pip install flask</code></pre>
+                <pre><code>然后阅读 main.py 开头对 secure_filename() 函数的编码修改，当然，你也可以忽略它。</code></pre>
+                <pre><code>>>> python main.py</code></pre>
+
+                <h3>内网穿透</h3>
+                <p>虽然这是局域网共享文件的工具，但它支持内网穿透，你可以通过穿透让全世界公网的朋友们都接入你的服务器。但相比局域网速度快不消耗流量的优势，外网访问速度会大幅度下降并且消耗流量，不过，如果你需要远程共享文件，这也是一个很棒的措施，这里内网穿透工具使用的是 cpolar.exe，你可以去它官网下载。</p>
+                <pre><code>https://www.cpolar.com</code></pre>
+                <pre><code>如果是源码运行
+step 1 >>> python main.py
+step 2 >>> cpolar http "第一步终端的 socket 套接字"
+例如 >>> cpolar  http  172.168.30.222:8000</code></pre>
+                <pre><code>如果是可执行程序运行
+step 1 >>> server.exe	(或者直接双击程序快捷方式)
+step 2 >>> cpolar http "第一步终端的 socket 套接字"</code></pre>
+            </div>
 
             <footer class="site-footer">
                 <span class="site-footer-owner">
                     <a href="#" class="btn btn-primary">Top</a>
                 </span>
             </footer>
+
+            <div style="text-align: center; font-size: small;">
+                <span id="busuanzi_value_page_pv"></span>-<span id="busuanzi_value_site_pv"></span>-<span id="busuanzi_value_site_uv"></span>
+            </div>
         </section>
     </body>
 
